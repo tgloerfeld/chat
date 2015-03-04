@@ -1,0 +1,80 @@
+<Fenster>:
+	BoxLayout:
+		orientation: 'vertical'
+		ScrollView:
+			Label: 
+				id: msg_output	
+		BoxLayout:
+			padding: 5, 5
+			spacing: 5
+			size_hint_y: None
+			height: 40
+			TextInput:
+				id: msg_input
+				multiline: False
+			Button:	
+				on_press: root.send()
+				size_hint_x: None
+				width: 80
+				text: 'senden'
+
+	StackLayout:
+
+		orientation: 'tb-lr'
+		size_hint:(0.3,1)
+	
+		Label:	
+			size_hint_y: None
+			height: 20
+			text_size: (self.size)
+			halign: 'left'
+			text: 'IP-adress:'
+
+		TextInput:
+			size_hint_y: None
+			height: 30
+			id: 'ip'
+
+		Label:	
+			size_hint_y: None
+			height: 20
+			text_size: (self.size)
+			halign: 'left'
+			text: 'port:'
+
+		TextInput:
+			size_hint_y: None
+			height: 30
+			id: 'port'
+
+		Label:	
+			size_hint_y: None
+			height: 20
+			text_size: (self.size)
+			halign: 'left'
+			text: 'Username:'
+
+		TextInput:
+			size_hint_y: None
+			height: 30
+			id: user
+	
+		Label:	
+			size_hint_y: None
+			height: 30
+
+		Button:
+			size_hint:(None, None)
+			height: 30
+			width: 60
+			on_press: root.connect
+			text: 'connect'
+
+
+
+
+
+		
+
+
+	
